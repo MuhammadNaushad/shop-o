@@ -137,17 +137,17 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             const SizedBox(height: 10),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: Row(
                 children: [
                   SizedBox(
                     height: 52,
-                    width: 280,
+                    width: 290,
                     child: DefaultTextField(
                         fillColor: AppConstants.abColor,
                         preffixIcon: IconButton(
                           onPressed: () {},
-                          icon:const Icon(Icons.search),
+                          icon: const Icon(Icons.search),
                         ),
                         labelText: 'Search products',
                         textInputType: TextInputType.name,
@@ -156,7 +156,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   const Spacer(),
                   Container(
                     height: 52,
-                    width: 44,
+                    width: 52,
                     color: AppConstants.primaryColor,
                     child: Image.asset('assets/images/filter.png'),
                   )
@@ -205,27 +205,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             //const SizedBox(height: 20),
             //const SizedBox(height: 20),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              child: Headlines(title: 'Best Seller'),
-            ),
-            const SizedBox(height: 20),
-            BlocBuilder<SellerBloc, SellerState>(
-              builder: (context, state) {
-                if (state is SellerLoadingState) {
-                  return const Center(
-                    child: CircularProgressIndicator(),
-                  );
-                } else if (state is SellerLoadedState) {
-                  return buildSellerList(state.sellers);
-                } else if (state is SellerFailedState) {
-                  return Center(
-                    child: Text(state.message.toString()),
-                  );
-                }
-                return Container();
-              },
-            ),
+
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 20),
               child: Headlines(title: 'Popular'),
@@ -247,7 +227,27 @@ class _HomeScreenState extends State<HomeScreen> {
                 return Container();
               },
             ),
-
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Headlines(title: 'Best Seller'),
+            ),
+            const SizedBox(height: 20),
+            BlocBuilder<SellerBloc, SellerState>(
+              builder: (context, state) {
+                if (state is SellerLoadingState) {
+                  return const Center(
+                    child: CircularProgressIndicator(),
+                  );
+                } else if (state is SellerLoadedState) {
+                  return buildSellerList(state.sellers);
+                } else if (state is SellerFailedState) {
+                  return Center(
+                    child: Text(state.message.toString()),
+                  );
+                }
+                return Container();
+              },
+            ),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 20),
               child: Headlines(title: 'New Arrivals'),

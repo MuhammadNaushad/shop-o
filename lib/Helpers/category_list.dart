@@ -8,7 +8,7 @@ Widget buildCategoryList(List<Category> popularCategories) {
   return Column(
     children: [
       SizedBox(
-        height: 220,
+        height: 150,
         width: 500,
         //width: double.infinity,
         child: ListView.builder(

@@ -32,6 +32,10 @@ class DefaultTextField extends StatelessWidget {
         obscureText: obscureText,
         decoration: InputDecoration(
             filled: true,
+            enabledBorder: const OutlineInputBorder(
+              borderSide: BorderSide(
+                  width: 1, color: AppConstants.borderColor), //<-- SEE HERE
+            ),
             fillColor: fillColor,
             contentPadding:
                 const EdgeInsets.only(left: 14.0, bottom: 8.0, top: 8.0),
