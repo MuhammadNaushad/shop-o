@@ -79,23 +79,79 @@ Widget buildHintsList(List<Sliders> sliders) {
                                 ),
                               ),
                               Positioned(
-                                  bottom: 20,
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(15.0),
-                                    child: Row(
-                                      children: const [
-                                        Text('Shop Now',
-                                            style: TextStyle(
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.w600,
-                                            )),
-                                        Icon(
-                                          Icons.arrow_forward_ios,
-                                          size: 15,
-                                        ),
-                                      ],
-                                    ),
-                                  ))
+                                bottom: 20,
+                                child: Padding(
+                                  padding: const EdgeInsets.all(15.0),
+                                  child: Row(
+                                    children: const [
+                                      Text('Shop Now',
+                                          style: TextStyle(
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.w600,
+                                          )),
+                                      Icon(
+                                        Icons.arrow_forward_ios,
+                                        size: 15,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                              Positioned(
+                                bottom: 10,
+                                left: 150,
+                                right: 20,
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      height: 8,
+                                      width: 8,
+                                      decoration: BoxDecoration(
+                                        color: AppConstants.primaryColor,
+                                        borderRadius: BorderRadius.circular(50),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                              Positioned(
+                                bottom: 10,
+                                left: 170,
+                                right: 20,
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      height: 8,
+                                      width: 8,
+                                      decoration: BoxDecoration(
+                                        border: Border.all(
+                                            color: AppConstants.primaryColor),
+                                        //color: AppConstants.primaryColor,
+                                        borderRadius: BorderRadius.circular(50),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                              Positioned(
+                                bottom: 10,
+                                left: 190,
+                                right: 20,
+                                child: Row(
+                                  children: [
+                                    Container(
+                                      height: 8,
+                                      width: 8,
+                                      decoration: BoxDecoration(
+                                        border: Border.all(
+                                            color: AppConstants.primaryColor),
+                                        //color: AppConstants.primaryColor,
+                                        borderRadius: BorderRadius.circular(50),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
                             ],
                           ),
                         ),
