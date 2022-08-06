@@ -9,7 +9,7 @@ Widget buildCategoryList(List<Category> popularCategories) {
     children: [
       SizedBox(
         height: 150,
-        width: 500,
+        //width: 200,
         //width: double.infinity,
         child: ListView.builder(
             scrollDirection: Axis.horizontal,
@@ -17,29 +17,22 @@ Widget buildCategoryList(List<Category> popularCategories) {
             //shrinkWrap: true,
             itemBuilder: (context, index) {
               return Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: InkWell(
-                  onTap: () {},
-                  child: SizedBox(
-                    height: 20,
-                    width: 100,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        const SizedBox(height: 20),
-                        const CircleAvatar(
-                          backgroundColor: AppConstants.categoriesbgColor,
-                          radius: 40,
-                          child: FaIcon(
-                            FontAwesomeIcons.addressCard,
-                            size: 30,
-                          ),
-                        ),
-                        const SizedBox(height: 10),
-                        Text(popularCategories[index].category!.name!),
-                      ],
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Column(
+                  //crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    const SizedBox(height: 20),
+                    const CircleAvatar(
+                      backgroundColor: AppConstants.categoriesbgColor,
+                      radius: 40,
+                      child: FaIcon(
+                        FontAwesomeIcons.addressCard,
+                        size: 30,
+                      ),
                     ),
-                  ),
+                    const SizedBox(height: 10),
+                    Text(popularCategories[index].category!.name!),
+                  ],
                 ),
               );
             }),

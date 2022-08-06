@@ -6,12 +6,12 @@ import 'package:shop_o/Blocs/seller/seller_bloc.dart';
 import 'package:shop_o/Helpers/build_popular_product_list.dart';
 import 'package:shop_o/Helpers/build_seller_list.dart';
 import 'package:shop_o/Helpers/category_list.dart';
+import 'package:shop_o/Helpers/default_search_box.dart';
 import 'package:shop_o/Helpers/new_arrival_list.dart';
 
 import '../Blocs/newArrival/new_arrial_bloc.dart';
 import '../Blocs/sliders bloc/product_bloc.dart';
 import '../Helpers/banner_list.dart';
-import '../Helpers/default_text_fields.dart';
 import '../Helpers/headlines.dart';
 import '../Helpers/medium_text.dart';
 import '../app_constants.dart';
@@ -142,8 +142,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   SizedBox(
                     height: 52,
-                    width: 290,
-                    child: DefaultTextField(
+                    width: 250,
+                    child: DefaultSearchField(
                         fillColor: AppConstants.abColor,
                         preffixIcon: IconButton(
                           onPressed: () {},

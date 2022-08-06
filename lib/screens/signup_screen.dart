@@ -58,13 +58,13 @@ class SignupScreen extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 20),
-                DefaultTextField(
+                const DefaultTextField(
                     fillColor: AppConstants.abColor,
                     labelText: 'Username',
                     textInputType: TextInputType.name,
                     obscureText: false),
                 const SizedBox(height: 20),
-                DefaultTextField(
+                const DefaultTextField(
                     fillColor: AppConstants.abColor,
                     labelText: 'Email',
                     textInputType: TextInputType.name,
@@ -83,7 +83,7 @@ class SignupScreen extends StatelessWidget {
                 DefaultTextField(
                     suffixIcon: IconButton(
                       onPressed: () {},
-                      icon: const Icon(Icons.remove_red_eye_sharp),
+                      icon:const Icon(Icons.remove_red_eye_sharp),
                     ),
                     fillColor: AppConstants.abColor,
                     labelText: 'Confirm Password',

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shop_o/app_constants.dart';
 
-class DefaultTextField extends StatelessWidget {
+class DefaultSearchField extends StatelessWidget {
   final String labelText;
   final IconButton? suffixIcon;
   final IconButton? preffixIcon;
@@ -10,7 +10,7 @@ class DefaultTextField extends StatelessWidget {
   final TextInputType textInputType;
   final bool obscureText;
   final VoidCallback? callback;
-  const DefaultTextField({
+  const DefaultSearchField({
     Key? key,
     required this.labelText,
     //this.suffixIcon =  Icon('assets/'),
@@ -32,17 +32,10 @@ class DefaultTextField extends StatelessWidget {
         obscureText: obscureText,
         decoration: InputDecoration(
             filled: true,
-            enabledBorder: const OutlineInputBorder(
-              borderSide: BorderSide(
-                  width: 1, color: AppConstants.borderColor), //<-- SEE HERE
-            ),
             fillColor: fillColor,
             //contentPadding:
-            //  const EdgeInsets.only(left: 14.0, bottom: 8.0, top: 8.0),
-            focusedBorder: const OutlineInputBorder(
-              borderSide: BorderSide(color: AppConstants.borderColor),
-              //borderRadius: new BorderRadius.circular(25.7),
-            ),
+            //const EdgeInsets.only(left: 14.0, bottom: 8.0, top: 8.0),
+
             contentPadding: const EdgeInsets.all(20.0),
             border: InputBorder.none,
             suffixIcon: suffixIcon ?? null,

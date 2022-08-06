@@ -19,7 +19,7 @@ Widget builNewArrivalList(List<Product> newArrivalProducts) {
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 crossAxisSpacing: 5,
-                childAspectRatio: 0.57,
+                childAspectRatio: 0.5,
                 mainAxisSpacing: 15,
               ),
               // scrollDirection: Axis.vertical,
