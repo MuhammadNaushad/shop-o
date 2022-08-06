@@ -9,7 +9,8 @@ class AppConstants {
   static const Color greenColor = Color(0xFF27AE60);
   static const Color shadowColor = Color(0xFF333333);
   static const Color bannerColor = Color(0xFFD3EFFF);
-  static const Color categorybgColor = Color(0xFFFFBB38);
+  static const Color categorybgColor = Color(0xFFFFBB38); //FFF7E7
+  static const Color categoriesbgColor = Color(0xFFFFF7E7); //FFF7E7
   static const Color homebgColor = Color(0xFFF8F8F8);
   static const Color borderColor = Color(0xFFD9D9D9);
   static const Color abColor = Color(0xFFFFFCF7);

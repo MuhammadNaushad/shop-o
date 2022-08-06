@@ -28,9 +28,12 @@ Widget buildCategoryList(List<Category> popularCategories) {
                       children: [
                         const SizedBox(height: 20),
                         const CircleAvatar(
-                          backgroundColor: AppConstants.whiteText,
+                          backgroundColor: AppConstants.categoriesbgColor,
                           radius: 40,
-                          child: FaIcon(FontAwesomeIcons.addressCard),
+                          child: FaIcon(
+                            FontAwesomeIcons.addressCard,
+                            size: 30,
+                          ),
                         ),
                         const SizedBox(height: 10),
                         Text(popularCategories[index].category!.name!),

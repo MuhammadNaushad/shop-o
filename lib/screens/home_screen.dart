@@ -248,9 +248,25 @@ class _HomeScreenState extends State<HomeScreen> {
                 return Container();
               },
             ),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
-              child: Headlines(title: 'New Arrivals'),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    'New Arrivals',
+                    style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w600,
+                        color: AppConstants.defaultText),
+                  ),
+                  SizedBox(
+                    height: 52,
+                    width: 52,
+                    child: Image.asset('assets/images/filter.png'),
+                  )
+                ],
+              ),
             ),
             const SizedBox(height: 20),
 
