@@ -2,11 +2,11 @@ import 'package:flutter/cupertino.dart';
 
 class SmalllText extends StatelessWidget {
   final String text;
-  double size;
+  final double size;
   final Color textColor;
   final FontWeight fontWeight;
   final TextDecoration textDecoration;
-  SmalllText(
+  const SmalllText(
       {Key? key,
       required this.text,
       this.size = 14,

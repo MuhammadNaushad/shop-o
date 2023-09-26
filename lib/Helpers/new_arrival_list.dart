@@ -1,13 +1,13 @@
 import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/material.dart';
 import '../app_constants.dart';
-import 'package:shop_o/model/product_model.dart';
+// import 'package:shop_o/model/product_model.dart';
 
-import '18fontsize.dart';
+import 'another_text_size.dart';
 import 'medium_text.dart';
 import 'small_text.dart';
 
-Widget builNewArrivalList(List<Product> newArrivalProducts) {
+Widget builNewArrivalList() {
   return Column(
     mainAxisAlignment: MainAxisAlignment.start,
     children: [
@@ -18,12 +18,12 @@ Widget builNewArrivalList(List<Product> newArrivalProducts) {
               physics: const NeverScrollableScrollPhysics(),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
-                crossAxisSpacing: 5,
-                childAspectRatio: 0.5,
+                crossAxisSpacing: 0,
+                childAspectRatio: .74,
                 mainAxisSpacing: 15,
               ),
               // scrollDirection: Axis.vertical,
-              itemCount: newArrivalProducts.length,
+              itemCount: 4,
               //shrinkWrap: true,
               itemBuilder: (context, index) {
                 return Padding(
@@ -31,7 +31,7 @@ Widget builNewArrivalList(List<Product> newArrivalProducts) {
                   child: InkWell(
                     onTap: () {},
                     child: Container(
-                      height: 600,
+                      height: 300,
                       width: 200,
                       decoration: BoxDecoration(
                           color: AppConstants.whiteText,
@@ -54,22 +54,23 @@ Widget builNewArrivalList(List<Product> newArrivalProducts) {
                                   FavoriteButton(
                                     iconSize: 40,
                                     isFavorite: false,
-                                    valueChanged: (_isFavorite) {
-                                      print('Is Favorite : $_isFavorite');
+                                    valueChanged: (isFavorite) {
+                                      print('Is Favorite : $isFavorite');
                                     },
                                   ),
                                 ],
                               ),
                               const SizedBox(height: 10),
-                              Image.network(
-                                "https://api.websolutionus.com/bigshop/${newArrivalProducts[index].thumbImage!}",
-                                fit: BoxFit.fill,
-                                height: 150,
-                                width: 150,
-                              ),
+                              // Image.network(
+                              //   "https://api.websolutionus.com/bigshop/${newArrivalProducts[index].thumbImage!}",
+                              //   fit: BoxFit.fill,
+                              //   height: 150,
+                              //   width: 150,
+                              // ),
+                              Image.asset("assets/images/arriaval_pro.png"),
                               const SizedBox(height: 10),
-                              Row(
-                                children: const [
+                              const Row(
+                                children: [
                                   Icon(
                                     Icons.star,
                                     color: AppConstants.primaryColor,
@@ -93,10 +94,11 @@ Widget builNewArrivalList(List<Product> newArrivalProducts) {
                                 ],
                               ),
                               const SizedBox(height: 10),
-                              Wrap(
+                              const Wrap(
                                 children: [
                                   MediumText(
-                                    text: newArrivalProducts[index].name!,
+                                    /// text: newArrivalProducts[index].name!,
+                                    text: "Samsung Galaxy 3 in 512GB",
                                     textColor: AppConstants.defaultText,
                                     textDecoration: TextDecoration.none,
                                     fontWeight: FontWeight.w500,
@@ -104,19 +106,21 @@ Widget builNewArrivalList(List<Product> newArrivalProducts) {
                                 ],
                               ),
                               const Spacer(),
-                              Row(
+                              const Row(
                                 children: [
                                   AnotherTextSize(
-                                    text:
-                                        newArrivalProducts[index].offerPrice ??
-                                            ''.toString(),
+                                    text: "\$${69}",
+
+                                    /// newArrivalProducts[index].offerPrice ??
+                                    // ''.toString(),
                                     textColor: AppConstants.redColor,
                                   ),
-                                  const SizedBox(width: 10),
+                                  SizedBox(width: 10),
                                   SmalllText(
-                                    text: newArrivalProducts[index]
-                                        .price!
-                                        .toString(),
+                                    // text: newArrivalProducts[index]
+                                    //     .price!
+                                    //     .toString(),
+                                    text: "\$${89}",
                                     textColor: AppConstants.discountColor,
                                     textDecoration: TextDecoration.lineThrough,
                                   ),

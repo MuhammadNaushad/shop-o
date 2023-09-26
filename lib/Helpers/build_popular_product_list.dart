@@ -1,24 +1,24 @@
 import 'package:favorite_button/favorite_button.dart';
 import 'package:flutter/material.dart';
 import '../app_constants.dart';
-import 'package:shop_o/model/product_model.dart';
+// import 'package:shop_o/model/product_model.dart';
 
-import '18fontsize.dart';
+import 'another_text_size.dart';
 import 'medium_text.dart';
 import 'small_text.dart';
 
-Widget builPopularProductlList(List<Product> popularCategoryProducts) {
+Widget builPopularProductlList() {
   return Column(
     mainAxisAlignment: MainAxisAlignment.start,
     children: [
       Wrap(
         children: [
           SizedBox(
-            height: 350,
+            height: 320,
             width: 450,
             child: ListView.builder(
                 scrollDirection: Axis.horizontal,
-                itemCount: popularCategoryProducts.length,
+                itemCount: 5,
                 shrinkWrap: true,
                 itemBuilder: (context, index) {
                   return Padding(
@@ -56,9 +56,9 @@ Widget builPopularProductlList(List<Product> popularCategoryProducts) {
                                           FavoriteButton(
                                             iconSize: 40,
                                             isFavorite: false,
-                                            valueChanged: (_isFavorite) {
+                                            valueChanged: (isFavorite) {
                                               print(
-                                                  'Is Favorite : $_isFavorite');
+                                                  'Is Favorite : $isFavorite');
                                             },
                                           ),
                                         ],
@@ -66,15 +66,17 @@ Widget builPopularProductlList(List<Product> popularCategoryProducts) {
                                         /// apni aktu dekhe din
                                       ),
                                       const SizedBox(height: 10),
-                                      Image.network(
-                                        "https://api.websolutionus.com/bigshop/${popularCategoryProducts[index].thumbImage!}",
-                                        fit: BoxFit.fill,
-                                        height: 150,
-                                        width: 150,
-                                      ),
+                                      // Image.network(
+                                      //   "https://api.websolutionus.com/bigshop/${popularCategoryProducts[index].thumbImage!}",
+                                      //   fit: BoxFit.fill,
+                                      //   height: 150,
+                                      //   width: 150,
+                                      // ),
+                                      Image.asset(
+                                          "assets/images/popular_pro.png"),
                                       const SizedBox(height: 10),
-                                      Row(
-                                        children: const [
+                                      const Row(
+                                        children: [
                                           Icon(
                                             Icons.star,
                                             color: AppConstants.primaryColor,
@@ -98,11 +100,10 @@ Widget builPopularProductlList(List<Product> popularCategoryProducts) {
                                         ],
                                       ),
                                       const SizedBox(height: 10),
-                                      Wrap(
+                                      const Wrap(
                                         children: [
                                           MediumText(
-                                            text: popularCategoryProducts[index]
-                                                .name!,
+                                            text: "Samsung Galaxy 3 in 512GB",
                                             textColor: AppConstants.defaultText,
                                             textDecoration: TextDecoration.none,
                                             fontWeight: FontWeight.w500,
@@ -110,19 +111,22 @@ Widget builPopularProductlList(List<Product> popularCategoryProducts) {
                                         ],
                                       ),
                                       const Spacer(),
-                                      Row(
+                                      const Row(
                                         children: [
                                           AnotherTextSize(
-                                            text: popularCategoryProducts[index]
-                                                    .offerPrice ??
-                                                ''.toString(),
+                                            text:
+                                                // popularCategoryProducts[index]
+                                                //         .offerPrice ??
+                                                '\$ ${69}',
+                                            // .toString(),
                                             textColor: AppConstants.redColor,
                                           ),
                                           SizedBox(width: 10),
                                           SmalllText(
-                                            text: popularCategoryProducts[index]
-                                                .price!
-                                                .toString(),
+                                            text: "\$${87}",
+                                            // popularCategoryProducts[index]
+                                            //     .price!
+                                            //     .toString(),
                                             textColor:
                                                 AppConstants.discountColor,
                                             textDecoration:

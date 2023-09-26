@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:shop_o/app_constants.dart';
-import '../model/product_model.dart';
+// import '../model/product_model.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-Widget buildCategoryList(List<Category> popularCategories) {
+Widget buildCategoryList() {
   //SearchFoodBloc searchBloc;
   return Column(
     children: [
@@ -13,7 +13,7 @@ Widget buildCategoryList(List<Category> popularCategories) {
         //width: double.infinity,
         child: ListView.builder(
             scrollDirection: Axis.horizontal,
-            itemCount: popularCategories.length,
+            itemCount: 5,
             //shrinkWrap: true,
             itemBuilder: (context, index) {
               return Padding(
@@ -22,16 +22,17 @@ Widget buildCategoryList(List<Category> popularCategories) {
                   //crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     const SizedBox(height: 20),
-                    const CircleAvatar(
+                    CircleAvatar(
                       backgroundColor: AppConstants.categoriesbgColor,
                       radius: 40,
-                      child: FaIcon(
-                        FontAwesomeIcons.addressCard,
-                        size: 30,
-                      ),
+                      // child: FaIcon(
+                      //   FontAwesomeIcons.addressCard,
+                      //   size: 30,
+                      // ),
+                      child: Image.asset("assets/images/gaming.png"),
                     ),
                     const SizedBox(height: 10),
-                    Text(popularCategories[index].category!.name!),
+                    const Text('Gaming'),
                   ],
                 ),
               );

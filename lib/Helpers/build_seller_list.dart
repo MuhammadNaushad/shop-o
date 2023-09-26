@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:shop_o/app_constants.dart';
 
-import '../model/product_model.dart';
+// import '../model/product_model.dart';
 
-Widget buildSellerList(List<Seller> sellers) {
+Widget buildSellerList() {
   return Column(
     children: [
       SizedBox(
         height: 160,
         child: ListView.builder(
             scrollDirection: Axis.horizontal,
-            itemCount: sellers.length,
+            itemCount: 4,
             shrinkWrap: true,
             itemBuilder: (context, index) {
               return Padding(
@@ -27,8 +27,9 @@ Widget buildSellerList(List<Seller> sellers) {
                           color: AppConstants.whiteText,
                           borderRadius: BorderRadius.circular(50),
                         ),
-                        child: Image.network(
-                            'https://api.websolutionus.com/bigshop/${sellers[index].logo!}'),
+                        // child: Image.network(
+                        //     'https://api.websolutionus.com/bigshop/${sellers[index].logo!}'),
+                        child: Image.asset("assets/images/cart.png"),
                       ),
 
                       // Flexible(
@@ -41,7 +42,7 @@ Widget buildSellerList(List<Seller> sellers) {
                       //   ),
                       // ),
                       const SizedBox(height: 20),
-                      Text(sellers[index].shopName!),
+                      const Text("Shopno BD"),
                     ],
                   ),
                 ),

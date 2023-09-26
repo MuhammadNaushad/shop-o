@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../app_constants.dart';
-import 'package:shop_o/model/product_model.dart';
+// import 'package:shop_o/model/product_model.dart';
 
-Widget buildHintsList(List<Sliders> sliders) {
+Widget buildHintsList() {
   return Column(
     children: [
       SizedBox(
@@ -10,7 +10,7 @@ Widget buildHintsList(List<Sliders> sliders) {
         width: 450,
         child: PageView.builder(
             scrollDirection: Axis.horizontal,
-            itemCount: sliders.length,
+            itemCount: 3,
             //shrinkWrap: true,
             itemBuilder: (context, index) {
               return Padding(
@@ -23,15 +23,21 @@ Widget buildHintsList(List<Sliders> sliders) {
                       Opacity(
                         opacity: 0.8,
                         child: Container(
-                          //height: 500,
+                          height: 200,
                           width: double.infinity,
                           color: AppConstants.bannerColor,
                           child: Stack(
                             children: [
                               Positioned(
-                                  child: Image.network(
-                                'https://api.websolutionus.com/bigshop/${sliders[index].image!}',
-                              )),
+                                  right: 0,
+                                  child: Image.asset(
+                                    "assets/images/slider.png",
+                                    height: 150,
+                                  )
+                                  //     Image.network(
+                                  //   'https://api.websolutionus.com/bigshop/${sliders[index].image!}',
+                                  // )
+                                  ),
                               Positioned(
                                 child: Padding(
                                   padding: const EdgeInsets.symmetric(
@@ -56,34 +62,34 @@ Widget buildHintsList(List<Sliders> sliders) {
                                   ),
                                 ),
                               ),
-                              Positioned(
+                              const Positioned(
                                 top: 50,
                                 child: Padding(
-                                  padding: const EdgeInsets.all(10.0),
+                                  padding: EdgeInsets.all(10.0),
                                   child: Text(
-                                    sliders[index].label!,
+                                    'Apple Wireless',
                                   ),
                                 ),
                               ),
-                              Positioned(
+                              const Positioned(
                                 top: 100,
                                 child: Padding(
-                                  padding: const EdgeInsets.all(5.0),
+                                  padding: EdgeInsets.all(5.0),
                                   child: Text(
-                                    sliders[index].title!,
-                                    style: const TextStyle(
+                                    "Samsungs10+",
+                                    style: TextStyle(
                                       fontSize: 30,
                                       fontWeight: FontWeight.w400,
                                     ),
                                   ),
                                 ),
                               ),
-                              Positioned(
+                              const Positioned(
                                 bottom: 20,
                                 child: Padding(
-                                  padding: const EdgeInsets.all(15.0),
+                                  padding: EdgeInsets.all(15.0),
                                   child: Row(
-                                    children: const [
+                                    children: [
                                       Text('Shop Now',
                                           style: TextStyle(
                                             fontSize: 12,

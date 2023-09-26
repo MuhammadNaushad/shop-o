@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 class AnotherTextSize extends StatelessWidget {
   final String text;
-  double size;
+  final double size;
   final Color textColor;
   final FontWeight fontWeight;
 
-  AnotherTextSize(
+  const AnotherTextSize(
       {Key? key,
       required this.text,
       this.size = 18,
