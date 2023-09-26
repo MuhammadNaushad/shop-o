@@ -15,6 +15,8 @@
 | Home Page 2 | Home Page 3 | 
 | ![Screenshot_1695710338](https://github.com/hprity60/shop-o/assets/104090144/8164a53b-0de1-4c84-8c79-be5a66e0f981) | ![Screenshot_1695710344](https://github.com/hprity60/shop-o/assets/104090144/e5f2532e-bd1c-4982-bdf3-b2efdf3838e0) |
 
+[Figma Link](https://www.figma.com/file/wfLfT7G0sixeIDS3Bl5uTg/Test-Project-for-job?type=design&node-id=1-366&mode=design&t=fEHEFXpNxKxIrg8S-0)
+
 # Stacks
 
 `Dart`   `Flutter`   `UI`
